@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6; /* Beige clair */
+            color: #333; /* Noir */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #996515; /* Beige foncé */
+        }
+
+        form {
+            background-color: #f0f0f0; /* Beige plus clair */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centrer le contenu du formulaire */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4d4d4d; /* Gris foncé */
+        }
+
+        input[type="file"] {
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #996515; /* Beige foncé */
+            color: #fff; /* Blanc */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 70%; /* Taille d'image réduite */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .info-table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 60%;
+            border: 2px solid #996515; /* Bordure de tableau couleur Beige foncé */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .info-table th, .info-table td {
+            border: 1px solid #f0f0f0; /* Bordure de cellule beige plus clair */
+            padding: 10px;
+            text-align: left;
+            background-color: #ccc; /* Gris clair */
+            color: #333; /* Noir */
+        }
+
+        .info-field {
+            margin-top: 10px;
+        }
+
+        .image-container {
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/kyc_v2" method="post" enctype="multipart/form-data">
+        <h1>Image Processing</h1>
+        <label for="recto_image">ID Image:</label>
+        <input type="file" name="recto_image" accept="image/*" required>
+        <button type="submit">Detect and Process</button>
+    </form>
+
+    {% if response_data %}
+        <div class="container">
+            <table class="info-table">
+                <tr>
+                    <td>Nom</td>
+                    <td>{{ response_data.nom }}</td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td>{{ response_data.prenom }}</td>
+                </tr>
+                <tr>
+                    <td>Date de Naissance</td>
+                    <td>{{ response_data.dateNaissance }}</td>
+                </tr>
+                <tr>
+                    <td>Date de Validite</td>
+                    <td>{{ response_data.dateValidite }}</td>
+                </tr>
+                <tr>
+                    <td>Nationalité</td>
+                    <td>{{ response_data.nationalite }}</td>
+                </tr>
+                <tr>
+                    <td>Numéro Etranger</td>
+                    <td>{{ response_data.numeroEtranger }}</td>
+                </tr>
+                <tr>
+                    <td>Sanction</td>
+                    <td>{{ response_data.sanction }}</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>{{ response_data.type }}</td>
+                </tr>
+            </table>
+
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='recto.jpg') }}" alt="ID Image">
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>

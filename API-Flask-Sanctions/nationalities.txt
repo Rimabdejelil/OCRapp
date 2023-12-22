@@ -1,0 +1,72 @@
+Russia - RU
+Ukraine - UA
+Georgia - GE
+Belarus - BY
+Cyprus - CY
+Armenia - AM
+Azerbaijan - AZ
+Switzerland - CH
+United Kingdom - GB
+France - FR
+Iran - IR
+Germany - DE
+Netherlands - NL
+Serbia - RS
+Syria - SY
+China - CN
+Austria - AT
+British Indian Ocean Territory - IO
+Moldova - MD
+Kazakhstan - KZ
+Spain - ES
+Singapore - SG
+Kyrgyzstan - KG
+Czech Republic - CZ
+Latvia - LV
+Luxembourg - LU
+United Arab Emirates - AE
+Mali - ML
+Finland - FI
+Malta - MT
+Brazil - BR
+Estonia - EE
+British Virgin Islands - VG
+Marshall Islands - MH
+Italy - IT
+Belgium - BE
+Ireland - IE
+United States - US
+Turkey - TR
+Slovakia - SK
+Donetsk (Occupied Ukraine) - N/A
+Hungary - HU
+Poland - PL
+Uzbekistan - UZ
+Venezuela - VE
+Bermuda - BM
+South Africa - ZA
+Israel - IL
+Greece - GR
+Cayman Islands - KY
+Bahamas - BS
+Belize - BZ
+Montenegro - ME
+Egypt - EG
+Croatia - HR
+Bulgaria - BG
+Palestinian Territories - PS
+Bosnia & Herzegovina - BA
+San Marino - SM
+Lithuania - LT
+South Korea - KR
+Togo - TG
+Mauritius - MU
+Seychelles - SC
+Argentina - AR
+India - IN
+Panama - PA
+Monaco - MC
+Liechtenstein - LI
+Luhansk (Occupied Ukraine) - N/A
+Uruguay - UY
+Vietnam - VN
